@@ -2,11 +2,11 @@
 #include <conio.h>
 using namespace std;
 
-char ans;
 int main()
 {
 int month;
 int day;
+char ans;
 
 cout << "Ever wonder what your zodiac sign is?"<<endl;
 cout <<"Just enter the specified information to calculate your zodiac sign!\n"<<endl;
@@ -91,14 +91,14 @@ do
                  cout << "Your sign is SAGITTARIUS!\n";
               else
                   cout << "Your sign is CAPRICORN!\n";
-              system("pause");
+			  break;
 
-				cout <<"Do you want to see your Zodiac Personality Profile?";
-				cin  >>ans;
    }
-} while (ans=='Y'|| ans=='N');
+   cout <<"Do you wish to start over?(y/n)"<< endl;
+   cin >> ans;
+} while (ans != 'y');
+return main();
 
-getch();
+
+
 }
-
-
