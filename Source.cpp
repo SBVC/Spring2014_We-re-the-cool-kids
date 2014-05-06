@@ -1,5 +1,7 @@
 #include <iostream>
 #include <conio.h>
+#include <ctime> 
+#include <string>
 using namespace std;
 
 int main()
@@ -94,10 +96,18 @@ do
 			  break;
 
    }
-   cout <<"Do you wish to start over?(y/n)"<< endl;
+   cout <<"Do you wish to see your compatible zodiac signs?(y/n)"<< endl;
    cin >> ans;
 } while (ans != 'y');
-return main();
+
+string userInput;  
+srand(static_cast<unsigned int>(time(0)));
+
+cout << "Enter the sign you wish to view compatability with."<< endl; 
+cin >> userInput; 
+	cout << "You are " << ( rand() % 100 + 1 ) << "% compatible with " << userInput << endl; 
+	system("pause"); 
+return 0; 
 
 
 }
